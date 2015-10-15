@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+    <LinearLayout 
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="CADASTRO DE CLIENTE"
+	    android:layout_gravity="center"
+	    />
+	
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1">
+        
+        <TableRow >
+		    <TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="Nome:"
+		        />
+		    <EditText 
+		        android:layout_width="fill_parent" android:layout_height="wrap_content"
+		        android:id="@+id/campo_nome"
+		        />            
+        </TableRow>
+        
+        <TableRow >
+		      <TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="E-mail:"
+		        />
+		    <EditText 
+		        android:layout_width="fill_parent" android:layout_height="wrap_content"
+		        android:id="@+id/campo_email"
+		        />
+        </TableRow>
+        
+        <TableRow >
+		    <TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="Telefone:"
+		        />
+		    <EditText 
+		        android:layout_width="fill_parent" android:layout_height="wrap_content"
+		        android:id="@+id/campo_telefone"
+		        android:inputType="number"
+		        />            
+        </TableRow>
+        
+        <TableRow >
+           	<TextView 
+	        	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	        	android:text="Rua:"
+	        />
+		    <EditText 
+		        android:layout_width="fill_parent" android:layout_height="wrap_content"
+		        android:id="@+id/campo_rua"
+		        />
+        </TableRow>
+        
+        <TableRow >
+		      <TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="Bairro:"
+		        />
+		    
+			<EditText 
+		        android:layout_width="fill_parent" android:layout_height="wrap_content"
+		        android:id="@+id/campo_bairro"
+		        />          
+        </TableRow>
+        
+        <TableRow >
+		    <TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="N°:"
+		        />
+	
+		    <EditText
+		        android:layout_width="200px" android:layout_height="wrap_content" 
+		        android:id="@+id/campo_numero"
+		        android:inputType="number"
+		        />
+	    </TableRow>
+	    
+        <TableRow >
+		    <TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="Cep:"
+		        />
+	
+		    <EditText
+		        android:layout_width="200px" android:layout_height="wrap_content"
+		        android:id="@+id/campo_cep"
+		        android:inputType="number"
+		        />
+	    </TableRow>
+	    
+	    <TableRow >
+		    <TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="Cidade:"
+		        />
+		    <EditText 
+		        android:layout_width="270px" android:layout_height="wrap_content"
+		        android:id="@+id/campo_cidade"
+		        />
+	    </TableRow>
+	    
+	    <TableRow >
+		    <TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="Estado:"
+		        />
+	
+		    <EditText
+		        android:id="@+id/campo_estado"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content" 
+		        />
+		</TableRow>
+		
+		<TableRow >
+	    	<TextView 
+		        android:layout_width="wrap_content" android:layout_height="wrap_content"
+		        android:text="Complemento:"
+		        />
+		    
+		    <EditText 
+		        android:layout_width="fill_parent" android:layout_height="wrap_content"
+		        android:id="@+id/campo_complemento"
+		        />
+	    </TableRow>
+	    
+	    <TableRow >
+		   <Button
+		       android:layout_width="wrap_content" android:layout_height="wrap_content"
+	        	android:id="@+id/botao_salvar"
+	        	android:text="Salvar"
+	        />
+	    </TableRow>
+	    
+    </TableLayout>
+    </LinearLayout>
+</ScrollView>
+<!-- From: file:/C:/Marcel/Programas/workspace/Android/ControleDeVendas1/app/src/main/res/layout/cadastrar_cliente.xml -->
