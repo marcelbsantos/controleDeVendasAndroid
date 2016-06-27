@@ -26,18 +26,18 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 		for (int i = 0; i < qtdScripts; i++) {
 			String sql = scriptSQLCreate[i];
 			Log.i(CATEGORIA, sql);
-			//Cria o banco de dados executando o script de criaï¿½ï¿½o
+			//Cria o banco de dados executando o script de criacao
 			db.execSQL(sql);
 		}
 		
 	}
 
-	//Mudou versão do banco
+	//Mudou versao do banco
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int versaoAntiga, int novaVersao) {
 
-		Log.w(CATEGORIA, "Atualizando versão " + versaoAntiga + " para " + novaVersao
-				+ ". Todos os registros serão deletados.");
+		Log.w(CATEGORIA, "Atualizando versao " + versaoAntiga + " para " + novaVersao
+				+ ". Todos os registros serao deletados.");
 		Log.i(CATEGORIA, scriptSQLDelete);
 		//Deleta as tabelas ...
 		db.execSQL(scriptSQLDelete);

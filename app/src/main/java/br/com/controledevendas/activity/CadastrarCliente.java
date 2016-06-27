@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import br.com.controledevendas.R;
 import br.com.controledevendas.dao.ClienteDao;
 import br.com.controledevendas.dao.ClienteScriptBanco;
 import br.com.controledevendas.model.Cliente;
 import br.com.controledevendas.util.Extra;
 import br.com.controledevendas.util.Mask;
-import br.com.controledevendas.util.Validator;
 
 public class CadastrarCliente extends Activity {
 	
@@ -87,47 +87,47 @@ public class CadastrarCliente extends Activity {
 			private boolean testarCampoVazio() {
 				
 				if(TextUtils.isEmpty(nome.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo Nome está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo Nome esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 				
 				if(TextUtils.isEmpty(email.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo E-mail está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo E-mail esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 				
 				if(TextUtils.isEmpty(telefone.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo Telefone está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo Telefone esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 				
 				if(TextUtils.isEmpty(rua.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo Rua está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo Rua esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 				
 				if(TextUtils.isEmpty(bairro.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo Bairro está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo Bairro esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 				
 				if(TextUtils.isEmpty(numero.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo Número está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo Numero esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 				
 				if(TextUtils.isEmpty(cep.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo Cep está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo Cep esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 				
 				if(TextUtils.isEmpty(cidade.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo Cidade está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo Cidade esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 				
 				if(TextUtils.isEmpty(estado.getText().toString())) {
-					Toast.makeText(CadastrarCliente.this, "Campo Estado está vazio.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(CadastrarCliente.this, "Campo Estado esta vazio.", Toast.LENGTH_SHORT).show();
 					return true;
 				}
 					

@@ -1,32 +1,50 @@
 package br.com.controledevendas.notificacao;
 
-import br.com.controledevendas.R;
-import br.com.controledevendas.util.NotificacaoUtil;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import br.com.controledevendas.R;
+import br.com.controledevendas.model.Tarefa;
+import br.com.controledevendas.util.NotificacaoUtil;
+
 public class CriaNotificacaoCliente extends Activity {
+
+	public String tickerText = null;
+	public CharSequence titulo = null;
+	public CharSequence mensagem = null;
 
 	@Override
 	protected void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-		
 		TextView text = new TextView(this);
-		text.setText("Uma notificação foi disparada.");
+		text.setText("Uma notificacao foi disparada.");
 		setContentView(text);
-		
-		//Texto com a chamada para a notificação (barra de status)
-		String tickerText = "Você recebeu uma notificação";
+		Intent intent = getIntent();
+		Tarefa tarefa = (Tarefa) intent.getSerializableExtra("dadosDaNotificacao");
+		//Texto com a chamada para a notificacao (barra de status)
+		tickerText = "Voce recebeu uma notificacao";
 		//Quem enviou a mensagem
-		CharSequence titulo = "Ricardo";
-		CharSequence mensagem = "Exemplo de Notificação";
-		
-		//Exibe a notifiação para abrir a RecebeuMensagemActivity
-		criarNotificacao(this, tickerText, titulo, mensagem, ExecutaNotificacaoCliente.class);
-		
+		titulo = "Controle de Vendas";
+		//CharSequence mensagem = "Exemplo de Notificacao";
+		mensagem = tarefa.getDescricao();
+		//Exibe a notifiacao para abrir a RecebeuMensagemActivity
+		new Thread(
+				new Runnable() {
+					@Override
+					public void run() {
+						try {
+							Thread.sleep(20*1000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						criarNotificacao(CriaNotificacaoCliente.this, tickerText, titulo, mensagem, ExecutaNotificacaoCliente.class);
+					}
+
+				}
+		).start();
 	}
 
 	protected void criarNotificacao(Context context, CharSequence mensagemBarraStatus, CharSequence titulo,

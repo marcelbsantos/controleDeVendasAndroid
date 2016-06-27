@@ -2,14 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.controledevendas"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="22" />
-        
-    <uses-permission android:name="android.permission.INTERNET"/>    
-    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,21 +21,24 @@
         android:label="Controle de Vendas"
         android:theme="@style/AppTheme">
         <activity
-            android:name="Menu"
-            android:label="@string/app_name" >
+            android:name=".Menu"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    
         <activity android:name=".activity.CadastrarCliente" />
-        <activity android:name=".activity.CadastrarFornecedor"/>
-        <activity android:name=".activity.ListarClientes"/>  
-        <activity android:name=".activity.DetalharClientes"/>
-        <activity android:name=".notificacao.CriaNotificacaoCliente"/>
-        <activity android:name=".notificacao.ExecutaNotificacaoCliente"/>
-        
+        <activity android:name=".activity.CadastrarFornecedor" />
+        <activity android:name=".activity.ListarClientes" />
+        <activity android:name=".activity.DetalharClientes" />
+        <activity android:name=".notificacao.CriaNotificacaoCliente" />
+        <activity android:name=".notificacao.ExecutaNotificacaoCliente" />
+        <activity
+            android:name=".activity.TarefasActivity"
+            android:label="@string/title_activity_tarefas" />
+        <activity android:name=".activity.ActivityNotificar"></activity>
     </application>
 
 </manifest>

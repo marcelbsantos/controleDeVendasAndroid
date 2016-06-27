@@ -42,11 +42,11 @@ public class ListarClientes extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int posicao, long id) {
 
-				Intent edicao = new Intent(ListarClientes.this, CadastrarCliente.class);
+				Intent detalhes = new Intent(ListarClientes.this, DetalharClientes.class);
 				clienteSelecionado = (Cliente) listaClientes.getItemAtPosition(posicao);
-				
-				edicao.putExtra(Extra.CLIENTE_SELECIONADO, clienteSelecionado);
-				startActivity(edicao);
+
+				detalhes.putExtra(Extra.CLIENTE_SELECIONADO, clienteSelecionado);
+				startActivity(detalhes);
 			}
 			
 		});
@@ -77,27 +77,26 @@ public class ListarClientes extends Activity {
 		ClienteDao dao = new ClienteDao(ListarClientes.this);
 		List<Cliente> clientes = dao.listarClientes();
 		ArrayAdapter<Cliente> adapter = new ArrayAdapter<Cliente>
-										(ListarClientes.this, android.R.layout.simple_list_item_1, clientes);
-		
+				(ListarClientes.this, android.R.layout.simple_list_item_1, clientes);
+
 		listaClientes.setAdapter(adapter);
-		
+
 	}
 
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 		
-		MenuItem detalhar = menu.add("Detalhar");
+		MenuItem detalhar = menu.add("Editar");
 		detalhar.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 			
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
-				
-				Intent detalhes = new Intent(ListarClientes.this, DetalharClientes.class);
-				
-				detalhes.putExtra(Extra.CLIENTE_SELECIONADO, clienteSelecionado);
-				
-				startActivity(detalhes);
-				
+
+				Intent cliente = new Intent(ListarClientes.this, CadastrarCliente.class);
+
+				cliente.putExtra(Extra.CLIENTE_SELECIONADO, clienteSelecionado);
+				startActivity(cliente);
+
 				return false;
 			}
 		});

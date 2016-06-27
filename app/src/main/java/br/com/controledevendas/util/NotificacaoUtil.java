@@ -20,7 +20,7 @@ public class NotificacaoUtil {
 	public static void criarNotificacao_V17(Context context, CharSequence tickerText, 
 			CharSequence titulo, CharSequence mensagem, int icon, int id, Intent intent) {
 
-		//PendingIntent para executar a intent ao selecionar a notificação
+		//PendingIntent para executar a intent ao selecionar a notificacao
 		PendingIntent p = PendingIntent.getActivity(context, 0, intent, 0);
 		Notification.Builder builder = new Notification.Builder(context);
 		builder.setTicker(tickerText);
@@ -30,12 +30,12 @@ public class NotificacaoUtil {
 		builder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_launcher));
 		builder.setContentIntent(p);
 		
-		//Cria a notificação
+		//Cria a notificacao
 		Notification n = builder.build();
 		n.vibrate = new long[] {150, 300, 150, 600};
 		
 		
-		//id(número único) que identifica esta notificação
+		//id(numero unico) que identifica esta notificacao
 		NotificationManager nm = (NotificationManager) context.getSystemService(Activity.NOTIFICATION_SERVICE);
 		nm.notify(id, n);
 		
@@ -54,7 +54,7 @@ public class NotificacaoUtil {
 	public static void criar(Context context, CharSequence tickerText, CharSequence title,
 								CharSequence message, int icon, int id, Intent intent) {
 
-		// PendingIntent para executar a intent ao selecionar a notificação
+		// PendingIntent para executar a intent ao selecionar a notificacao
 		PendingIntent p = PendingIntent.getActivity(context, 0, intent, 0);
 
 		Notification n = null;
@@ -79,11 +79,11 @@ public class NotificacaoUtil {
 			// Android 2.2
 			n = new Notification(icon, tickerText, System.currentTimeMillis());
 
-			// Informações
+			// Informacoes
 			n.setLatestEventInfo(context, title, message, p);
 		}
 
-		// id (numero único) que identifica esta notificação
+		// id (numero unico) que identifica esta notificacao
 		NotificationManager nm = (NotificationManager) context.getSystemService(Activity.NOTIFICATION_SERVICE);
 		nm.notify(id, n);
 	}

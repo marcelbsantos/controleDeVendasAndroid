@@ -1,12 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml
 	android:versionName
 		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml
 	android:versionCode
 		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:4:5-28
 		INJECTED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml
@@ -27,63 +29,85 @@ MERGED from [com.android.support:support-v4:21.0.3] C:\Marcel\Programas\workspac
 		INJECTED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:11:5-66
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:11:22-64
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:12:5-65
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:12:5-66
 	android:name
 		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:12:22-63
+android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:14:5-89
+	android:name
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:14:30-86
+android:uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:15:5-83
+	android:name
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:15:30-80
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:16:5-88
+	android:name
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:16:30-85
 application
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:14:5-35:19
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:18:5-42:19
 MERGED from [com.android.support:support-v4:21.0.3] C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml:16:5-19
 MERGED from [com.android.support:appcompat-v7:20.0.0] C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\AndroidManifest.xml:17:5-19
 MERGED from [com.android.support:support-v4:21.0.3] C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\AndroidManifest.xml:16:5-19
 	android:label
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:17:9-43
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:21:9-43
 	android:allowBackup
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:19:9-35
 	android:icon
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:16:9-45
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:20:9-45
 	android:theme
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:22:9-40
 activity#br.com.controledevendas.Menu
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:19:9-26:20
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:23:9-31:20
 	android:label
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:21:13-45
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:25:13-45
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:20:13-32
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:24:13-33
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:22:13-25:29
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:29:27-74
 activity#br.com.controledevendas.activity.CadastrarCliente
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:28:9-63
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:32:9-63
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:28:19-60
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:32:19-60
 activity#br.com.controledevendas.activity.CadastrarFornecedor
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:29:9-65
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:33:9-66
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:29:19-63
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:33:19-63
 activity#br.com.controledevendas.activity.ListarClientes
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:30:9-60
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:34:9-61
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:30:19-58
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:34:19-58
 activity#br.com.controledevendas.activity.DetalharClientes
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:31:9-62
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:35:9-63
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:31:19-60
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:35:19-60
 activity#br.com.controledevendas.notificacao.CriaNotificacaoCliente
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:32:9-71
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:36:9-72
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:32:19-69
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:36:19-69
 activity#br.com.controledevendas.notificacao.ExecutaNotificacaoCliente
-ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:33:9-74
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:37:9-75
 	android:name
-		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:33:19-72
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:37:19-72
+activity#br.com.controledevendas.activity.TarefasActivity
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:38:9-40:62
+	android:label
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:40:13-59
+	android:name
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:39:13-53
+activity#br.com.controledevendas.activity.ActivityNotificar
+ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:41:9-73
+	android:name
+		ADDED from C:\Marcel\Programas\workspace\Android\ControleDeVendas1\app\src\main\AndroidManifest.xml:41:19-61

@@ -1,15 +1,16 @@
 package br.com.controledevendas.dao;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import br.com.controledevendas.model.Cliente;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.controledevendas.model.Cliente;
 
 public class ClienteDao {
 
@@ -18,6 +19,7 @@ public class ClienteDao {
 	private static final String NOME_BANCO = "controle_de_vendas";
 	//Nome da tabela 
 	private static final String NOME_TABELA = "clientes";
+
 	protected SQLiteDatabase db;
 	
 	public static String[] colunas = new String[] {"id", "nome", "telefone", "email", "rua", "numero",
@@ -45,7 +47,6 @@ public class ClienteDao {
 		return id;
 	}
 	
-	//Insere um carro novo
 	public Long inserir(Cliente cliente) {
 		
 		ContentValues values = new ContentValues();
@@ -64,7 +65,6 @@ public class ClienteDao {
 		return id;
 	}
 	
-	//Insere em novo carro
 	private Long inserir(ContentValues values) {
 		Long id = db.insert(NOME_TABELA, null, values);
 		return id;
@@ -121,9 +121,12 @@ public class ClienteDao {
 	
 	//Retorna o cursor com todos os carros
 	public Cursor getCursor() {
+
 		try {
 			//select * from clientes
-			return db.query(NOME_TABELA, colunas, null, null, null, null, null);
+//			return db.rawQuery("SELECT * FROM clientes", null);
+			Cursor c = db.query(NOME_TABELA, colunas, null, null, null, null, null);
+			return c;
 		} catch (SQLException e) {
 			Log.i(CATEGORIA, "Erro ao buscar os clientes: " + e.toString());
 			return null;
@@ -132,15 +135,18 @@ public class ClienteDao {
 	}
 	
 	public List<Cliente> listarClientes(){
-		
-		Cursor c = getCursor();
-		
+
 		List<Cliente> clientes = new ArrayList<Cliente>();
-		
+
+		Cursor c = getCursor();
+		if(c == null){
+			return null;
+		}
+
 //		"nome", "telefone", "email", "rua", "numero",
 //		"bairro", "cep", "complemento", "cidade", "estado
 		while(c.moveToNext()) {
-			//Recupera os índices das colunas
+			//Recupera os indices das colunas
 			Cliente cliente = new Cliente();
 			cliente.setId(c.getLong(c.getColumnIndex("id")));
 			cliente.setNome(c.getString(c.getColumnIndex("nome")));
@@ -153,10 +159,10 @@ public class ClienteDao {
 			cliente.setComplemento(c.getString(c.getColumnIndex("complemento")));
 			cliente.setCidade(c.getString(c.getColumnIndex("cidade")));
 			cliente.setEstado(c.getString(c.getColumnIndex("estado")));
-			
+
 			clientes.add(cliente);
 		}
-		
+
 		return clientes;
 	}
 	

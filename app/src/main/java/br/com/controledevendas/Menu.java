@@ -1,9 +1,11 @@
 package br.com.controledevendas;
 
+import br.com.controledevendas.activity.ActivityNotificar;
 import br.com.controledevendas.activity.CadastrarCliente;
 import br.com.controledevendas.activity.CadastrarFornecedor;
 import br.com.controledevendas.activity.ListarClientes;
 import br.com.controledevendas.notificacao.CriaNotificacaoCliente;
+
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,7 +42,7 @@ public class Menu extends ListActivity {
 			break;
 
 		case 2:
-			startActivity(new Intent(this, CriaNotificacaoCliente.class));
+			startActivity(new Intent(this, ActivityNotificar.class));
 			break;
 			
 		
